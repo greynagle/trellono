@@ -10,8 +10,8 @@ export default function List(props) {
                     <h2>{val.header}</h2>
                 </header>
                 <div className="List-cards">
-                    <Card cards={val.cardIds} master={props.master} />
-                    <button type="button" className="List-add-button">
+                    <Card listId={val.id} cards={val.cardIds} master={props.master} onDelete={props.onDelete} />
+                    <button type="button" className="List-add-button" onClick={() => props.onRandom(val.id)}>
                         + Add Random Card
                     </button>
                 </div>
